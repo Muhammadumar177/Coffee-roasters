@@ -1,12 +1,18 @@
 :root{
   --text-color: #333;
   --accent-color-green:#0A775F;
+  --accent-color-green-80:rgb(10, 119,95, 0.8);
+  --accent-color-green-60:rgb(10, 119, 95,  0.6);
+  --accent-color-light-brown: #C99B67;
+  --accent-color-light-brown-80: rgb(201, 155, 103, 0.8);
+  --accent-color-light-brown-60: rgb(201, 155, 103, 0.6);
   --outline-color: var(  --accent-color-green);
+  --light-brown: #f3d7b7;
 }
 @font-face {
   font-family: "Roboto";
   src: url( "../fonts/Roboto-Medium.woff") format("woff2"),
-      url("../fonts/Roboto-Medium.woff") format("woff");
+  url("../fonts/Roboto-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -15,7 +21,7 @@
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/Roboto-Regular.woff2") format("woff2"),
-      url("../fonts/Roboto-Regular.woff") format("woff");
+  url("../fonts/Roboto-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -24,7 +30,7 @@
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/Roboto-Bold.woff2") format("woff2"),
-      url("../fonts/Roboto-Bold.woff") format("woff");
+  url("../fonts/Roboto-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -40,20 +46,20 @@ html{
 *,
 *::before,
 *::after {
-box-sizing:inherit;
+  box-sizing:inherit;
 }
 
 body{
   height: 100%;
-display: flex;
-padding: 0;
-margin: 0;
-font-size: 16px;
-line-height: 1.75;
-font-family: "Roboto" "Arial" ,sans-serif;
-flex-direction: column;
-background-color: #fff;
-color:var(--text-coloror) ;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.75;
+  font-family: "Roboto" "Arial" ,sans-serif;
+  flex-direction: column;
+  background-color: #fff;
+  color:var(--text-coloror) ;
 }
 img{
   max-width: 100%;
@@ -62,17 +68,55 @@ img{
 
 }
 *:focus{
-outline: 2px dashed var(--outline-color);
-outline-offset: 3px;
+  outline: 2px dashed var(--outline-color);
+  outline-offset: 3px;
 }
 
 .container{
   width: 100%;
   max-width : 1440px;
-padding-left: 20px;
-padding-right: 20px;
-margin-left: auto;
-margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.button {
+  display: inline-block;
+  padding: 16px 24px;
+  border: none;
+  border-radius: 100px;
+
+  font-family: "Roboto";
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing:2px ;
+  white-space: nowrap;
+  transition: all 0.3s ease ;
+
+}
+.button-green {
+  background-color: var(--accent-color-green);
+  color: #fff;
+}
+.button-green:hover{
+  background-color: var(--accent-color-green-80);
+}
+.button-green:active{
+  background-color: var(--accent-color-green-60);
+}
+.button-brown {
+  background-color: var(--accent-color-light-brown);
+  color: #fff;
+}
+.button-brown:hover{
+  background-color: var(--accent-color-light-brown-80);
+}
+.button-brown:active{
+  background-color: var(--accent-color-light-brown-60);
 }
 
 .main-content{
@@ -80,14 +124,15 @@ margin-right: auto;
 
 }
 /* site header wrapper
- */
+*/
 .site-header-hero-wrapper{
-background-image: url(../img/hero-bgimg.jpg);
+  background-color:var(--light-brown);
+  background-image: url(../img/hero-bgimg.jpg);
 }
 /* site header */
 .site-header {
-padding-top: 40px;
-padding-bottom: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 .site-header-container {
   display: flex;
@@ -98,6 +143,7 @@ padding-bottom: 40px;
 }
 
 .site-header-logo-link {
+  flex-shrink: 0;
   display: flex;
   text-decoration: none;
 }
@@ -106,6 +152,7 @@ padding-bottom: 40px;
 }
 .site-header-logo-link:active{
   opacity: 0.6;
+
 
 }
 .site-header-logo-img {
@@ -116,13 +163,13 @@ padding-bottom: 40px;
 
 .sitenav-list {
   display: flex;
-padding: 0;
-margin: 0;
-list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 
 }
 .sitenav-item:not(:last-child){
-margin-right: 40px;
+  margin-right: 40px;
 }
 .sitenav-link {
   display: block;
@@ -133,15 +180,59 @@ margin-right: 40px;
   font-weight: bold;
   color: var(--text-color);
   font-family: "Roboto";
+  white-space: nowrap;
 }
 .sitenav-link:hover{
   color: var(--accent-color-green);
 }
 .sitenav-link:active{
- opacity: 0.6;
+  opacity: 0.6;
+}
+/* hero */
+.hero {
+}
+.hero-container {
+  display: flex;
+
+  padding-left: 0;
+  padding-right: 0;
 }
 
+.hero-info-wrapper {
+  width: 100%;
+  max-width: 730px;
+  padding-top: 116px;
+  padding-bottom: 100px;
+  padding: 150px;
+  padding-right: 116px;
+}
+.hero-heading {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-family: "Roboto";
+  font-size: 64px;
+  line-height: normal;
+  color: black;
+}
+.hero-text {
+  margin: 0 ;
 
+  font-size: 16px;
+  line-height: 1.5;
+}
+.hero-text:not(:last-child){
+  margin-bottom: 34px;
+
+}
+
+.hero-img {
+  width: 710px;
+  height: 596px;
+  object-fit: cover;
+}
+.hero-img-index{
+  width: 696px;
+}
 
 
 
