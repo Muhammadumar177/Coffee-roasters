@@ -185,6 +185,10 @@ img{
   font-family: "Roboto";
   white-space: nowrap;
 }
+.site-nav-medium-font .sitenav-link{
+  font-size: 16px;
+  line-height: normal;
+}
 .sitenav-link:hover{
   color: var(--accent-color-green);
 }
@@ -461,15 +465,60 @@ font-style: normal;
 font-weight: 400;
 line-height: 28px;
 }
-.how-it-works-actions {
-}
-.button {
-}
-.button-brown {
 
-align-items: center;
+
+.site-footer {
+  background-color: var(--light-brown);
+  background-image: url(../img/hero-bgimg.jpg);
+  padding: 65px 0;
+}
+.site-footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
 }
 
+.site-footer-logo-link {
+  display: flex;
+}
+.site-header-logo-img {
+flex-shrink: 0;
+width: 235px;
+height: 24px;
+object-fit: contain;
+
+}
+.site-footer-logo-link:hover{
+  opacity: 0.8;
+}
+.site-footer-logo-link:active{
+  opacity: 0.6;
+
+
+}
+.site-footer-socials {
+}
+.socials-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  align-items: center;
+}
+.socials-item:not(:last-child) {
+  margin-right: 30px;
+}
+.socials-link {
+  display: flex;
+  color: #333;
+}
+.socials-link:hover{
+  color: #0A775F;
+  transition: all 0.2s ease;
+}
+.socials-link:active{
+  opacity: 0.6;
+}
 
 
 
@@ -484,7 +533,8 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
 
-  .site-header-hero-wrapper{
+  .site-header-hero-wrapper,
+  .site-footer{
     background-image: url(../img/hero-bgimg@2x.jpg);
   }
   .index-collection-inner {
