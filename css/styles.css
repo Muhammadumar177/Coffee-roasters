@@ -231,8 +231,17 @@ img{
   margin-bottom: 34px;
 
 }
-
+.hero-img-wrapper{
+  position: relative;
+}
+.hero-img-brend{
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
 .hero-img {
+  display: block;
   width: 710px;
   height: 596px;
   object-fit: cover;
@@ -245,6 +254,7 @@ img{
   margin-bottom: 20px;
 }
 .index-collection-inner {
+  position: relative;
   padding: 50px 143px;
   background-color: var(--light-bg);
   background-image: url(../img/index-collection.jpg);
@@ -304,6 +314,23 @@ flex-direction: row-reverse;
 .inex-collection-tittle:not(:last-child){
 margin-bottom: 10px;
 }
+.leaves-left-one{
+position: absolute;
+left: -10px;
+top: 50px;
+
+}
+.leaves-right{
+  position: absolute;
+  top: 685px;
+  right: -20px;
+  transform: rotate(12.02deg);
+}
+.leaves-left-two{
+  position: absolute;
+  top: 1350px;
+  left: -12px;
+}
 /* .index-collection-item:nth-child(odd) .index-collection-info{
   padding-left: 117px;
 }
@@ -322,7 +349,8 @@ margin-bottom: 10px;
 }
 
 .index-inner {
-padding: 50px 30px
+  position: relative;
+  padding: 50px 30px
 ;
 background-image: url(../img/index-features-bg.jpg);
 background-size: 100% 700px;
@@ -379,6 +407,11 @@ font-weight: 500;
   font-size: 18px;
   line-height: 28px;
 }
+.index-inner-sticker-img{
+  position: absolute;
+  top: 233px;
+  left: -20px;
+}
 
 
 
@@ -390,6 +423,7 @@ font-weight: 500;
 }
 
 .how-it-works-inner {
+  position: relative;
   padding: 50px 30px;
   background-image:url(../img/green-bg.jpg);
   background-repeat: no-repeat;
@@ -398,6 +432,7 @@ font-weight: 500;
 
 }
 .how-it-works-heading {
+
   text-align: left;
   margin-top: 0;
   margin-bottom: 80px;
@@ -416,6 +451,7 @@ font-weight: 500;
   text-align: left;
 }
 .how-it-works-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: calc(100% / 3 - 20px);
@@ -423,6 +459,9 @@ font-weight: 500;
   counter-increment: how-it-works;
 }
 .how-it-works-item::before {
+  position: relative
+  ;
+  z-index: 2;
   width: 60px;
   height: 60px;
   margin-bottom: 20px;
@@ -430,6 +469,19 @@ font-weight: 500;
   background-color:var(--light-bg);
   content: "";
 
+}
+.how-it-works-item::after{
+content: '';
+position: absolute;
+left: px;
+top: 30px;
+width: 450px;
+height: 3px;
+background-image:url(../img/line-brown\ \(2\).svg);
+background-repeat: no-repeat;
+}
+.how-it-works-item:last-child::after{
+  display: none;
 }
 .how-it-works-info {
   flex-grow: 1;
@@ -465,6 +517,16 @@ font-style: normal;
 font-weight: 400;
 line-height: 28px;
 }
+
+
+.how-it-works-sticker-img{
+  position: absolute;
+  top: 41px;
+  right: 69px;
+
+}
+
+/* .foooter */
 
 
 .site-footer {
